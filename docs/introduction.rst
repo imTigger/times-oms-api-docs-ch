@@ -6,7 +6,7 @@
 
 时丰API使用REST API接口.
 
-除了GET外, 所有接口接受HTTP JSON格式变数, 并会以JSON格式反馈.
+除了GET外, 所有端点接受HTTP JSON格式变数, 并会以JSON格式反馈.
 
 所有操作使用标准HTTP动词(GET, POST, PATCH, PUT, DELETE)所有响应使用HTTP状态代码.
 
@@ -18,7 +18,7 @@
     PATCH /orders/MTK00000001          # 更新订单
     DELETE /orders/MTK00000001         # 移除订单
 
-* 以上只作为例子参考, 部份API接口并未开放
+* 以上只作为例子参考, 部份API端点并未开放
 
 通用状态代码::
 
