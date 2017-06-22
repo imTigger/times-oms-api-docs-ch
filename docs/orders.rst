@@ -3,6 +3,7 @@
 
 建立订单(没有当地派送编号) [POST /orders]
 --------------------------------------------
+Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
 
 + 参数
     + consigneeCompanyName: (字串, 必须) - 收货人公司(英语)
@@ -41,6 +42,7 @@
 
 建立订单(已有当地派送编号) [POST /orders/{trackingNumber}]
 --------------------------------------------
+Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
 
 + 参数
     + consigneeCompanyName: (字串, 必须) - 收货人公司(英语)
@@ -171,7 +173,6 @@
 
 取得订单资料 [GET /orders/{trackingNumber}]
 ----------------------------------------
-
 + 响应 200 (application/json)
 
 .. code-block:: json
