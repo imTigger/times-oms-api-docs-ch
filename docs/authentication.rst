@@ -31,7 +31,7 @@ API令牌可以在时丰OMS平台中获得, 或会由时丰IT部门提供.
 令牌使用示例
 -------------------
 
-使用API令牌 piAOLkaYYBdscIv5YxsrYuiuFH7vwC231YlJ4kivW43iFJMp59blGLJGysKc发送Bare Minimal HTTP请求::
+使用API令牌 piAOLkaYYBdscIv5YxsrYuiuFH7vwC231YlJ4kivW43iFJMp59blGLJGysKc 发送Bare Minimal HTTP请求::
 
     GET /api/orders/MTK00000001 HTTP/1.1
     Authorization: Bearer piAOLkaYYBdscIv5YxsrYuiuFH7vwC231YlJ4kivW43iFJMp59blGLJGysKc
