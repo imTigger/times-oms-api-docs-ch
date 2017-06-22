@@ -10,7 +10,7 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: API 接口
+   :caption: API 端点
 
    authentication
    orders
