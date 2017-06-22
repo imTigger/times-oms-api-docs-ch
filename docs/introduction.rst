@@ -1,20 +1,20 @@
-Introduction
+介绍
 ============
 
-Specification
+规范
 -------------
 
-TEC Client API implements REST API interface.
+时丰API使用REST API接口.
 
-All endpoints accept HTTP POST variables as input, and JSON as output.
+除了GET外, 所有接口接受HTTP JSON格式变数, 并会以JSON格式反馈.
 
-All operations use standard HTTP verbs (GET, POST, PATCH, PUT, DELETE) and all response use HTTP status codes.
+所有操作使用标准HTTP动词(GET, POST, PATCH, PUT, DELETE)所有响应使用HTTP状态代码.
 
-Example verbs::
+动词例子::
 
-    GET /orders/MTK00000001            # Get Order Detail
-    POST /orders                       # Create an Order
-    PUT /orders/MTK00000001            # Replace an Order
+    GET /orders/MTK00000001            # 取得订单资料
+    POST /orders                       # 建立订单
+    PUT /orders/MTK00000001            # Replace an Order
     PATCH /orders/MTK00000001          # Update an Order
     DELETE /orders/MTK00000001         # Delete an Order
 
