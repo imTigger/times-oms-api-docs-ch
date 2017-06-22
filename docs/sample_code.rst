@@ -26,7 +26,7 @@ PHP:
         'consigneeCountry' => 'Thailand',
         'consigneeDistrict' => 'Bangkok',
         'consigneePostalCode' => '70150',
-        'consigneeCompanyNameLocale' => '\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07'',
+        'consigneeCompanyNameLocale' => '\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07',
         'consigneeContactNameLocale' => '\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07',
         'consigneeAddressLocale' => '90 100 \u0e21 8 \u0e15 \u0e08\u0e2d\u0e21\u0e1a\u0e36\u0e07  \u0e23\u0e32\u0e0a\u0e1a\u0e38\u0e23\u0e35  Ratchaburi \u0e08\u0e2d\u0e21\u0e1a\u0e36\u0e07  Chom Bueng 70150',
         'shipperCompanyName' => 'Client Company Limited',
