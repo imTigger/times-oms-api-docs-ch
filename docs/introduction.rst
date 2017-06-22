@@ -31,19 +31,20 @@
     412 - 前提条件失败 / 参数无效, 详情请检查响应内容
     428 - 要求前提条件 / 缺少参数, 详情请检查响应内容
 
-* For detailed status code explanations, please refer to http://www.restapitutorial.com/httpstatuscodes.html
+* 状态代码详细解释, 请参考 http://www.restapitutorial.com/httpstatuscodes.html
 
-* All Key words ("MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL") in this document follows RFC2119 recommandations (https://tools.ietf.org/html/rfc2119).
+* 在此的所有关键词（"必须", "不得", "应该", "不应该", "推荐", "可能"和"可选) 文件遵循RFC2119建议 (https://wenku.baidu.com/view/036f0da6f524ccbff1218472.html).
 
-Client Implementation
+客户端实现
 ---------------------
-The API is language independent.
+此API是与编程语言无关的.
 
-While this document provides PHP and Java sample code.
+此文档内会提供PHP及Java示例代码.
 
-Any client/library that can correctly handle `Authorization` HTTP header and HTTP verbs can be used.
+所有能正确处理HTTP授权及HTTP动词的客户端/代码库均能使用.
 
-Libraries used in sample code:
+示例代码中使用到的代码库:
 
 * PHP: Guzzle - http://guzzlephp.org/
 * Java: Okhttp - http://square.github.io/okhttp/
+* Java: org.json - https://mvnrepository.com/artifact/org.json/json
