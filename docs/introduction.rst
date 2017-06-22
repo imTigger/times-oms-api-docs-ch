@@ -33,7 +33,7 @@
 
 * 状态代码详细解释, 请参考 http://www.restapitutorial.com/httpstatuscodes.html
 
-* 在此的所有关键词（"必须", "不得", "应该", "不应该", "推荐", "可能"和"可选") 文件遵循RFC2119建议 (https://wenku.baidu.com/view/036f0da6f524ccbff1218472.html).
+* 在此的所有关键词（"必须", "不得", "应该", "不应该", "推荐", "可能"和"可选") 遵循文件RFC2119建议 (https://wenku.baidu.com/view/036f0da6f524ccbff1218472.html).
 
 客户端实现
 ---------------------
