@@ -1,14 +1,14 @@
-API Endpoints and API Webhooks
+API 端点 及 API 钩子触发
 ==========================
 
-API Endpoints
+API 端点
 -------------
 
-API Endpoins are used from your server to TEC servers and can be used to Search, Create, Update or Delete data.
+API 端点需要由您的服务器发送请求到时丰OMS的服务器, 用以搜寻, 建立, 更新或移除资料.
 
-Authentication MUST be provided to invoke API Endpoint calls.
+必须先提供身份验证才能调用API端点调用.
 
-API Webhooks
+API 钩子触发
 ------------
 
 API Webhooks are automated calls from TEC servers to your server triggered when a specific event happened.
