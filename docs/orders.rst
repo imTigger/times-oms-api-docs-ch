@@ -1,7 +1,45 @@
 订单
 ======
 
-建立订单 [POST /orders/{trackingNumber}]
+建立订单(没有当地派送编号) [POST /orders]
+--------------------------------------------
+
++ 参数
+    + consigneeCompanyName: (字串, 必须) - 收货人公司(英语)
+    + consigneeContactName: (字串, 必须) - 收货人联络人(英语)
+    + consigneePhone: (字串, 必须) - 收货人电话
+    + consigneeAddress: (字串, 必须) - 收货人地址(英语)
+    + consigneeCountry: (字串, 必须) - 收货人国家(英语)
+    + consigneeDistrict: (字串, 必须) - 收货人地区(英语)
+    + consigneeCompanyNameLocale: (字串, 必须) - 收货人公司(目的地官方语言)
+    + consigneeContactNameLocale: (字串, 必须) - 收货人联络人(目的地官方语言)
+    + consigneeAddressLocale: (字串, 必须) - 收货人地址(目的地官方语言)
+    + consigneePostalCode: (字串, 必须) - 收货人邮政编号
+    + shipperCompanyName: (字串, 必须) - 发货人公司(英语)
+    + shipperContactName: (字串, 必须) - 发货人联络人(英语)
+    + shipperPhone: (字串, 必须) - 发货人电话
+    + shipperAddress: (字串, 必须) - 发货人地址(英语)
+    + shipperCountry: (字串, 必须) - 发货人国家(英语)
+    + shipperPostalCode: (字串, 必须) - 发货人邮政编号
+    + paymentMethod: (字串, 必须) - 付款方式
+    + parcelValue: (十进制数, 必须) - 包裹价值
+    + productType: (字串, 必须) - 寄货渠道: Express = 专线; Postal = 邮政
+    + shipmentType: (整数, 必须) - 包裹类型: General Shipment = 普货; Sensitive Shipment = 带电池货(敏感货); Mobile & Tablet = 手机及平板计算机
+    + salePlatformName: (字串, 必须) - 销售平台名称
+    + referenceNumber: (字串, 可选) - 客户参考编号
+    + items[]: (阵列, 必须) - 货品内容阵列
+    + items[][sku]: (字串, 可选/必须) - 货品SKU
+    + items[][categoryId]: (字串, 必须) - 货品分类编号
+    + items[][categoryName]: (字串, 必须) - 货品分类名称
+    + items[][description]: (字串, 必须) - 品名
+    + items[][brand]: (字串, 可选/必须) - 牌子. 如包裹类型为手机及平板计算机, 此项必填
+    + items[][model]: (字串, 可选/必须) - 型号. 如包裹类型为手机及平板计算机, 此项必填
+    + items[][pieces]: (整数, 必须) - 单项SKU件数
+    + items[][unitPrice]: (十进制数, 必须) - 单项SKU单价
+    + items[][unitPriceCurrency]: (字串, 必须) - 货币单位, 使用ISO 4217标准
+    + items[][CODValue]: (十进制数, 必须) - 单项SKU COD货价(件类*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
+
+建立订单(已有当地派送编号) [POST /orders/{trackingNumber}]
 --------------------------------------------
 
 + 参数
