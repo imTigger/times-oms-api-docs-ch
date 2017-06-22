@@ -5,7 +5,7 @@
 
 最新内容将依据相应文档所述.
 
-建立订单 [POST /orders/{trackingNumber}] or [POST /orders]
+建立订单 [POST /orders/{trackingNumber}] 或 [POST /orders]
 --------------------------------------------
 
 PHP:
