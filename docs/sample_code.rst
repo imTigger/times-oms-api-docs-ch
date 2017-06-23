@@ -80,6 +80,7 @@
     var_dump($e->getResponse()->getBody()->getContents());
   }
 
+
   Java:
 
 .. code-block:: java
