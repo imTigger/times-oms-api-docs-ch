@@ -27,7 +27,7 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + productType: (字串, 必须) - 寄货渠道: Express = 专线; Postal = 邮政
     + shipmentType: (整数, 必须) - 包裹类型: General Shipment = 普货; Sensitive Shipment = 带电池货(敏感货); Mobile & Tablet = 手机及平板计算机
     + salePlatformName: (字串, 必须) - 销售平台名称
-    + referenceNumber: (字串, 必须) - 客户参考编号
+    + referenceNumber: (字串, 必须) - 客户参考编号, 唯一值
     + items[]: (阵列, 必须) - 货品内容阵列
     + items[][sku]: (字串, 可选/必须) - 货品SKU
     + items[][categoryId]: (字串, 必须) - 货品分类编号
@@ -66,7 +66,7 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
     + productType: (字串, 必须) - 寄货渠道: Express = 专线; Postal = 邮政
     + shipmentType: (整数, 必须) - 包裹类型: General Shipment = 普货; Sensitive Shipment = 带电池货(敏感货); Mobile & Tablet = 手机及平板计算机
     + salePlatformName: (字串, 必须) - 销售平台名称
-    + referenceNumber: (字串, 必须) - 客户参考编号
+    + referenceNumber: (字串, 必须) - 客户参考编号, 唯一值
     + items[]: (阵列, 必须) - 货品内容阵列
     + items[][sku]: (字串, 可选/必须) - 货品SKU
     + items[][categoryId]: (字串, 必须) - 货品分类编号
