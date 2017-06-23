@@ -8,7 +8,7 @@
 建立订单 [POST /orders/{trackingNumber}] 或 [POST /orders]
 --------------------------------------------
 
-  PHP:
+PHP:
 
 .. code-block:: php
 
@@ -81,7 +81,7 @@
   }
 
 
-  Java:
+Java:
 
 .. code-block:: java
 
@@ -152,7 +152,7 @@
 取得订单资料 [GET /orders/{trackingNumber}]
 ----------------------------------------
 
-  PHP:
+PHP:
 
 .. code-block:: php
 
@@ -189,7 +189,7 @@
   }
 
 
-  Java:
+Java:
 
 .. code-block:: java
 
