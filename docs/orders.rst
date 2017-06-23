@@ -38,7 +38,7 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + items[][pieces]: (整数, 必须) - 单项SKU件数
     + items[][unitPrice]: (十进制数, 必须) - 单项SKU单价
     + items[][unitPriceCurrency]: (字串, 必须) - 货币单位, 使用ISO 4217标准
-    + items[][CODValue]: (十进制数, 必须) - 单项SKU COD货价(件类*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
+    + items[][CODValue]: (十进制数, 必须) - 单项SKU COD货价(件数*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
 
 建立订单(已有当地派送编号) [POST /orders/{trackingNumber}]
 --------------------------------------------
@@ -77,7 +77,7 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
     + items[][pieces]: (整数, 必须) - 单项SKU件数
     + items[][unitPrice]: (十进制数, 必须) - 单项SKU单价
     + items[][unitPriceCurrency]: (字串, 必须) - 货币单位, 使用ISO 4217标准
-    + items[][CODValue]: (十进制数, 必须) - 单项SKU COD货价(件类*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
+    + items[][CODValue]: (十进制数, 必须) - 单项SKU COD货价(件数*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
 
 + 请求 (application/json)
 
