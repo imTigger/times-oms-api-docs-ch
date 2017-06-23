@@ -108,7 +108,7 @@ Java:
                 .add("shipperContactName", "John Lee")
                 .add("shipperPhone", "21800000")
                 .add("shipperAddress", "Room 88, Some Building, District, N.T.")
-                .add("shipperCountry", "Hong Kong")
+                .add("shipperCountry", "China")
                 .add("shipperPostalCode", "000000")
                 .add("paymentMethod", "COD")
                 .add("parcelValue", "5888")
@@ -148,7 +148,7 @@ Java:
     }
   }
 
-Get order [GET /orders/{trackingNumber}]
+取得订单资料 [GET /orders/{trackingNumber}]
 ----------------------------------------
 
   PHP:
