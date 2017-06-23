@@ -1,28 +1,28 @@
-Verification
+验证
 ============
 
-Specification
+规范
 -------------
 
-A "Webhook Secret" is sent along with all API requests.
+每个API请求都会有钩子密钥.
 
-You SHOULD verify the HTTP requests before performing any actions with the data received.
+您应该验证HTTP请求后再对接收到的数据进行任何操作或资料更新.
 
-Please note than "Webhook Secret" is different from "API Token" used in Endpoints.
+请注意, 钩子触发中使用的"密钥"是不同于API使用的"令牌".
 
-Obtaining Webhook Secret
+获取钩子密钥
 ------------------------
 
-The Webhook Secret can be obtained in TEC Client Platform, or provide by IT department of Times E-commerce.
+API令牌可以在时丰OMS平台中获得, 或会由时丰IT部门提供.
 
-Resetting Webhook Secret
+重置钩子密钥
 ------------------------
 
-If you believe that your Webhook Secret is leaked, you can request a reset in TEC Client Platform.
+如果您认为您的钩子密钥已经外泄, 您可以在时丰OMS平台中请求令牌重置.
 
-After reset, a new Webhook Secret will be issued and the old Webhook Secret is intermediately invalidated.
+重置后, 将会发出一个新的密钥, 而旧的密钥亦会立即失效.
 
-Webhook Secret Lifetime
+密钥有效时间
 -----------------------
 
-Webhook Secret never expire unless being reset.
+除非被重置, 否则密钥永远不会过期.
