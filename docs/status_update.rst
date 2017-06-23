@@ -1,15 +1,15 @@
-Status Update
+状态更新
 =============
 
-Order Status Update
+订单状态更新
 -------------------
 
-+ HTTP POST Parameters
-    + tracking_number: (string, always present)
-    + upload: (datetime, maybe empty)
-    + inbound: (datetime, maybe empty)
-    + outbound: (datetime, maybe empty)
-    + handover_linehaul: (datetime, maybe empty)
++ HTTP POST 参数
+    + tracking_number: (字串, 始终存在)
+    + upload: (日期时间, 或会留空)
+    + inbound: (日期时间, 或会留空)
+    + outbound: (日期时间, 或会留空)
+    + handover_linehaul: (日期时间, 或会留空)
 
 .. code-block:: text
 
