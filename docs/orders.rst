@@ -108,7 +108,7 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
         "shipperCountry":"China",
         "shipperPostalCode":"000000",
         "paymentMethod":"COD",
-        "parcelValue":1630,
+        "parcelValue":"1630",
         "productType":"Express",
         "shipmentType":"Mobile & Tablet",
         "salePlatformName":"Amazon",
@@ -121,10 +121,10 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
                  "description":"Apple new iphone 7 red 128g unlocked",
                  "brand":"Apple",
                  "model":"iphone 7",
-                 "pieces":2,
-                 "unitPrice":387,
+                 "pieces":"2",
+                 "unitPrice":"387",
                  "unitPriceCurrency":"THB",
-                 "CODValue":774
+                 "CODValue":"774"
             },
             {
                  "sku": "sku-test-9876543210",
@@ -133,10 +133,10 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
                  "description":"Xiaomu note 3 64gb",
                  "brand":"XiaoMu",
                  "model":"note 3",
-                 "pieces":1,
-                 "unitPrice":856,
+                 "pieces":"1",
+                 "unitPrice":"856",
                  "unitPriceCurrency":"THB",
-                 "CODValue":856
+                 "CODValue":"856"
             }
         ]
       }
