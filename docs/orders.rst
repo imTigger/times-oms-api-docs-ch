@@ -1,8 +1,11 @@
 订单
 ======
 
+建立订单
+----------
+
 建立订单(没有当地派送编号) [POST /orders]
---------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
 
 + 参数
@@ -41,7 +44,7 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + items[][CODValue]: (十进制数, 必须) - 单项SKU COD货价(件数*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
 
 建立订单(已有当地派送编号) [POST /orders/{trackingNumber}]
---------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
 
 + 参数
@@ -79,9 +82,13 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
     + items[][unitPriceCurrency]: (字串, 必须) - 货币单位, 使用ISO 4217标准
     + items[][CODValue]: (十进制数, 必须) - 单项SKU COD货价(件数*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
 
-+ 请求 (application/json)
+请求 (application/json)
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-消息主体 (示例)::
+消息主体 (示例)
+""""""""""""""""
+
+.. code-block:: json
 
       {
         "consigneeCompanyName":"Supachai Piamthong",
@@ -135,7 +142,8 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
       }
 
 
-+ 响应 201 (application/json)
+响应 201 (application/json)
+"""""""""""""""""""""""""""""
 
 .. code-block:: json
 
@@ -146,7 +154,8 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
             }
 
 
-+ 响应 409 (application/json)
+响应 409 (application/json)
+"""""""""""""""""""""""""""""""
 
 .. code-block:: json
 
@@ -154,7 +163,8 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
                 "message": "Order already exist"
             }
 
-+ 响应 412 (application/json)
+响应 412 (application/json)
+"""""""""""""""""""""""""""""""
 
 .. code-block:: json
 
@@ -162,7 +172,8 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
                 "message": "Invalid parameter"
             }
 
-+ 响应 428 (application/json)
+响应 428 (application/json)
+"""""""""""""""""""""""""""""""
 
 .. code-block:: json
 
@@ -170,10 +181,14 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
                 "message": "Missing parameter"
             }
 
+取得订单资料
+--------------
 
 取得订单资料 [GET /orders/{trackingNumber}]
-----------------------------------------
-+ 响应 200 (application/json)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+响应 200 (application/json)
+""""""""""""""""""""""""""""""
 
 .. code-block:: json
 
@@ -193,7 +208,8 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
                 }
             }
 
-+ 响应 404 (application/json)
+响应 404 (application/json)
+"""""""""""""""""""""""""""""""
 
 .. code-block:: json
 
