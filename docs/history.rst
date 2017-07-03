@@ -21,7 +21,7 @@
 | body row 2 | Cells may span columns.| 
 +------------+------------+-----------+ 
 | body row 3 | Cells may  | - Cells   | 
-+------------+ span rows. | - contain | 
++------------+ 中文 rows. | - contain | 
 | body row 4 |            | - blocks. | 
 +------------+------------+-----------+
 
