@@ -3,6 +3,12 @@
 
 .. toctree::
    :maxdepth: 2
+   :caption: 历史
+
+   history
+
+.. toctree::
+   :maxdepth: 2
    :caption: 开始
 
    introduction
