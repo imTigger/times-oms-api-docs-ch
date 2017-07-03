@@ -13,10 +13,10 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + consigneeContactName: (字串, 必须) - 收货人联络人(英语)
     + consigneePhone: (字串, 必须) - 收货人电话
     + consigneeAddress: (字串, 必须) - 收货人地址(英语)
-    + consigneeCountry: (字串, 必须) - 收货人国家(英语)
     + consigneeSubDistrict: (字串, 必须) - 收货人分区份(英语)
     + consigneeDistrict: (字串, 必须) - 收货人区份(英语)
     + consigneeProvince: (字串, 必须) - 收货人省份(英语)
+    + consigneeCountry: (字串, 必须) - 收货人国家(英语)
     + consigneeCompanyNameLocale: (字串, 必须) - 收货人公司(目的地官方语言)
     + consigneeContactNameLocale: (字串, 必须) - 收货人联络人(目的地官方语言)
     + consigneeAddressLocale: (字串, 必须) - 收货人地址(目的地官方语言)
@@ -25,10 +25,10 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + shipperContactName: (字串, 必须) - 发货人联络人(英语)
     + shipperPhone: (字串, 必须) - 发货人电话
     + shipperAddress: (字串, 必须) - 发货人地址(英语)
-    + shipperCountry: (字串, 必须) - 发货人国家(英语)
     + shipperSubDistrict: (字串, 必须) - 发货人分区份(英语)
     + shipperDistrict: (字串, 必须) - 发货人区份(英语)
     + shipperProvince: (字串, 必须) - 发货人省份(英语)
+    + shipperCountry: (字串, 必须) - 发货人国家(英语)
     + shipperPostalCode: (字串, 必须) - 发货人邮政编号
     + paymentMethod: (字串, 必须) - 付款方式
     + parcelValue: (十进制数, 必须) - 包裹价值
