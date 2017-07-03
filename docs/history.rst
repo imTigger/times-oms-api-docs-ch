@@ -24,3 +24,12 @@
       | - 新增钩子触发案例"
    C, D, "| These lines appear as two lines, 
       | but they are indented, and my OCD will simply not allow it."
+    A, B, "These lines appear as one line, 
+    even though they are written in two lines."
+    C, D, "| These lines appear as two lines, 
+    | but they are indented, and my OCD will simply not allow it."
+    E, F, "| If I continue this line in another line,
+    it will appear in a new line."
+    G, H, "If there is a blank line between the two lines,
+
+    there will be a blank line between the lines."
