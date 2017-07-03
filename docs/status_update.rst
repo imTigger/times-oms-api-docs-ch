@@ -10,6 +10,9 @@
     + inbound: (日期时间, 或会留空)
     + outbound: (日期时间, 或会留空)
     + handover_linehaul: (日期时间, 或会留空)
+    + reject: (日期时间, 或会留空)
+    + return: (日期时间, 或会留空)
+    + receive: (日期时间, 或会留空)
 
 .. code-block:: text
 
@@ -17,4 +20,4 @@
   Host: your-server.com
   Authorization: Bearer piAOLkaYYBdscIv5YxsrYuiuFH7vwC231YlJ4kivW43iFJMp59blGLJGysKc
 
-  tracking_number=MTK00000001&upload=2017-01-01+00%3A00%3A00&inbound=2017-01-01+01%3A00%3A00&outbound=2017-01-01+02%3A00%3A00&close_box=2017-01-01+03%3A00%3A00&handover_linehaul=
+  tracking_number=MTK00000001&upload=2017-01-01+00%3A00%3A00&inbound=2017-01-01+01%3A00%3A00&outbound=2017-01-01+02%3A00%3A00&close_box=2017-01-01+03%3A00%3A00&handover_linehaul=&reject=&return=&receive=2017-01-01+03%3A00%3A00
