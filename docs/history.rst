@@ -1,4 +1,4 @@
-版本历史
+历史版本
 ============
 
 +------------+---------------+-------------------------------------------------------------+ 
@@ -13,14 +13,14 @@
 |            |               | - 新增钩子触发案例                                          |
 +------------+---------------+------------------------------------------------------------+ 
 
-.. csv-table:: Frozen Delights!
-   :header: "版本", "更新日期", "更新内容"
+.. csv-table:: 历史版本
+   :header: "版本", "更新日期", "更新内容"
    :widths: 15, 30, 50
 
    1.0, "2017-06-22", "| - 初期版本"
    1.1, "2017-07-03", "| - 新增订单端点要求参数 
-     |   - shipper_subdistrict, shipper_district, shipper_province,
-     |       consignee_subdistrict, consignee_district, consignee_province 
-     | - 新增钩子触发案例"
+      |   - shipper_subdistrict, shipper_district, shipper_province,
+      |       consignee_subdistrict, consignee_district, consignee_province 
+      | - 新增钩子触发案例"
    C, D, "| These lines appear as two lines, 
-     | but they are indented, and my OCD will simply not allow it."
+      | but they are indented, and my OCD will simply not allow it."
