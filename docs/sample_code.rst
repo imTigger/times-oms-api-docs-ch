@@ -250,7 +250,7 @@ PHP:
       $webhook_secret = 'TLnrQjh0w1nZRv41UFEQXOuY0NgoIufTaEPagPqPNqNuSZF3o0AJGPFa56mt';
       
       try {
-          $token = $getBearerToken();
+          $token = $this->getBearerToken();
           if (empty($token)) {
               throw new Exception("Authentication Error.");
           }
