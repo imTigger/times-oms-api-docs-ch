@@ -13,7 +13,7 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + consigneeContactName: (字串, 必须) - 收货人联络人(英语)
     + consigneePhone: (字串, 必须) - 收货人电话
     + consigneeAddress: (字串, 必须) - 收货人地址(英语)
-    + consigneeSubDistrict: (字串, 必须) - 收货人分区份(英语)
+    + consigneeSubdistrict: (字串, 必须) - 收货人分区份(英语)
     + consigneeDistrict: (字串, 必须) - 收货人区份(英语)
     + consigneeProvince: (字串, 必须) - 收货人省份(英语)
     + consigneeCountry: (字串, 必须) - 收货人国家(英语)
@@ -25,7 +25,7 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + shipperContactName: (字串, 必须) - 发货人联络人(英语)
     + shipperPhone: (字串, 必须) - 发货人电话
     + shipperAddress: (字串, 必须) - 发货人地址(英语)
-    + shipperSubDistrict: (字串, 必须) - 发货人分区份(英语)
+    + shipperSubdistrict: (字串, 必须) - 发货人分区份(英语)
     + shipperDistrict: (字串, 必须) - 发货人区份(英语)
     + shipperProvince: (字串, 必须) - 发货人省份(英语)
     + shipperCountry: (字串, 必须) - 发货人国家(英语)
@@ -57,7 +57,7 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
     + consigneeContactName: (字串, 必须) - 收货人联络人(英语)
     + consigneePhone: (字串, 必须) - 收货人电话
     + consigneeAddress: (字串, 必须) - 收货人地址(英语)
-    + consigneeSubDistrict: (字串, 必须) - 收货人分区份(英语)
+    + consigneeSubdistrict: (字串, 必须) - 收货人分区份(英语)
     + consigneeDistrict: (字串, 必须) - 收货人区份(英语)
     + consigneeProvince: (字串, 必须) - 收货人省份(英语)
     + consigneeCountry: (字串, 必须) - 收货人国家(英语)
@@ -69,7 +69,7 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
     + shipperContactName: (字串, 必须) - 发货人联络人(英语)
     + shipperPhone: (字串, 必须) - 发货人电话
     + shipperAddress: (字串, 必须) - 发货人地址(英语)
-    + shipperSubDistrict: (字串, 必须) - 发货人分区份(英语)
+    + shipperSubdistrict: (字串, 必须) - 发货人分区份(英语)
     + shipperDistrict: (字串, 必须) - 发货人区份(英语)
     + shipperProvince: (字串, 必须) - 发货人省份(英语)
     + shipperCountry: (字串, 必须) - 发货人国家(英语)
@@ -105,8 +105,10 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
         "consigneeContactName": "Supachai Piamthong",
         "consigneePhone": "123456789",
         "consigneeAddress": "12 34 Moo 8 Chom Bueng Ratchaburi Ratchaburi Chom Bueng 70150",
+        "consigneeSubdistrict":"ท่ายาง",
+        "consigneeDistrict":"เมืองพิษณุโลก",
+        "consigneeProvince":"Bangkok",
         "consigneeCountry": "Thailand",
-        "consigneeDistrict": "Bangkok",
         "consigneePostalCode": "70150",
         "consigneeCompanyNameLocale": "\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07",
         "consigneeContactNameLocale": "\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07",
@@ -115,6 +117,9 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
         "shipperContactName": "DEF",
         "shipperPhone": "(501) 123-4567",
         "shipperAddress": "Room 1, HaoQuan Building, 1st Jichangdongmen Road Jingtai Street, Baiyun District, Guangzhou province, China",
+        "shipperSubdistrict":"Baoan",
+        "shipperDistrict":"Shenzheng",
+        "shipperProvince":"Guangdong",
         "shipperCountry": "China",
         "shipperPostalCode": "000000",
         "paymentMethod": "COD",
