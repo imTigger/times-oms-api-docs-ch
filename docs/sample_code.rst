@@ -6,7 +6,7 @@
 最新内容将依据相应文档所述.
 
 建立订单 [POST /orders/{trackingNumber}] 或 [POST /orders]
---------------------------------------------
+------------------------------------------------------------------
 
 PHP:
 
@@ -24,7 +24,9 @@ PHP:
         'consigneePhone' => '123456789',
         'consigneeAddress' => '12 34 Moo 8 Chom Bueng Ratchaburi Ratchaburi Chom Bueng 70150',
         'consigneeCountry' => 'Thailand',
-        'consigneeDistrict' => 'Bangkok',
+        'consigneeSubdistrict' => 'ท่ายาง',
+        'consigneeDistrict' => 'เมืองพิษณุโลก',
+        'consigneeProvince' => 'Bangkok',
         'consigneePostalCode' => '70150',
         'consigneeCompanyNameLocale' => '\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07',
         'consigneeContactNameLocale' => '\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07',
@@ -33,6 +35,9 @@ PHP:
         'shipperContactName' => 'John Lee',
         'shipperPhone' => '21800000',
         'shipperAddress' => 'Room 88, Some Building, District, N.T.',
+        'shipperSubdistrict' => 'Baoan',
+        'shipperDistrict' => 'Shenzheng',
+        'shipperProvince' => 'Guangdong',
         'shipperCountry' => 'China',
         'shipperPostalCode' => '000000',
         'paymentMethod' => 'COD',
@@ -99,6 +104,9 @@ Java:
                 .add("consigneeContactName", "Supachai Piamthong")
                 .add("consigneePhone", "123456789")
                 .add("consigneeAddress", "12 34 Moo 8 Chom Bueng Ratchaburi Ratchaburi Chom Bueng 70150")
+                .add("consigneeSubdistrict", "ท่ายาง")
+                .add("consigneeDistrict", "เมืองพิษณุโลก")
+                .add("consigneeProvince", "Bangkok")
                 .add("consigneeCountry", "Thailand")
                 .add("consigneeDistrict", "Bangkok")
                 .add("consigneePostalCode", "70150")
@@ -109,6 +117,9 @@ Java:
                 .add("shipperContactName", "John Lee")
                 .add("shipperPhone", "21800000")
                 .add("shipperAddress", "Room 88, Some Building, District, N.T.")
+                .add("shipperSubdistrict", "Baoan")
+                .add("shipperDistrict", "China")
+                .add("shipperProvince", "Guangdong")
                 .add("shipperCountry", "China")
                 .add("shipperPostalCode", "000000")
                 .add("paymentMethod", "COD")
@@ -150,7 +161,7 @@ Java:
   }
 
 取得订单资料 [GET /orders/{trackingNumber}]
-----------------------------------------
+---------------------------------------------
 
 PHP:
 
@@ -222,4 +233,98 @@ Java:
               e.printStackTrace();
           }
       }
+  }
+
+
+接受钩子回传资料
+----------------------------
+
+PHP:
+
+.. code-block:: php
+
+  <?php
+  require 'vendor/autoload.php';
+  
+  function webhook() {
+      $webhook_secret = 'TLnrQjh0w1nZRv41UFEQXOuY0NgoIufTaEPagPqPNqNuSZF3o0AJGPFa56mt';
+      
+      try {
+          $token = $getBearerToken();
+          if (empty($token)) {
+              throw new Exception("Authentication Error.");
+          }
+          if ($token != $webhook_secret) {
+              throw new Exception("Authentication Error.");
+          }
+          
+          /*
+           * Get own reference number and their related timestamp 
+           */
+          
+          $content = array();
+          parse_str(urldecode(file_get_contents("php://input")), $content);
+          
+          $tracking_number = $content['tracking_number'];
+          $reference_number = $content['reference_number'];
+          $sort_in = $content['sort_in'];
+          $sort_out = $content['sort_out'];
+          $close_box = $content['close_box'];
+          $handover_linehaul = $content['handover_linehaul'];
+          $reject = $content['reject'];
+          $return = $content['return'];
+          $receive = $content['receive'];
+                    
+          /*
+           * Check and update your database if authenticate successs
+           */
+          
+          
+ 
+          echo json_encode(
+              array(
+                  'tracking_number' => $tracking_number,
+                  'reference_number' => $reference_number,
+                  'message' => 'Success',
+              )
+          );
+      } catch (Exception $e) {
+          echo json_encode(
+              array(
+                  'message' => $e->getMessage(),
+              )
+          );
+      }
+  }
+  
+  function getAuthorizationHeader(){
+      $headers = null;
+      if (isset($_SERVER['Authorization'])) {
+          $headers = trim($_SERVER["Authorization"]);
+      }
+      else if (isset($_SERVER['HTTP_AUTHORIZATION'])) { //Nginx or fast CGI
+          $headers = trim($_SERVER["HTTP_AUTHORIZATION"]);
+      } elseif (function_exists('apache_request_headers')) {
+          $requestHeaders = apache_request_headers();
+          // Server-side fix for bug in old Android versions (a nice side-effect of this fix means we don't care about capitalization for Authorization)
+          $requestHeaders = array_combine(array_map('ucwords', array_keys($requestHeaders)), array_values($requestHeaders));
+          //print_r($requestHeaders);
+          if (isset($requestHeaders['Authorization'])) {
+              $headers = trim($requestHeaders['Authorization']);
+          }
+      }
+      return $headers;
+  }
+  /**
+  * get access token from header
+  * */
+  function getBearerToken() {
+      $headers = $this->getAuthorizationHeader();
+      // HEADER: Get the access token from the header
+      if (!empty($headers)) {
+          if (preg_match('/Bearer\s(\S+)/', $headers, $matches)) {
+              return $matches[1];
+          }
+      }
+      return null;
   }
