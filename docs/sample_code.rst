@@ -315,9 +315,7 @@ PHP:
       }
       return $headers;
   }
-  /**
-  * get access token from header
-  * */
+  
   function getBearerToken() {
       $headers = $this->getAuthorizationHeader();
       // HEADER: Get the access token from the header
