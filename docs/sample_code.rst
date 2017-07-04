@@ -85,79 +85,83 @@ PHP:
     var_dump($e->getResponse()->getBody()->getContents());
   }
 
-
 Java:
 
 .. code-block:: java
 
   import okhttp3.*;
+  import org.json.JSONObject;
 
   import java.io.IOException;
 
   public class OrderCreate {
-    public static void main(String[] args) {
+      public static void main(String[] args) {
+          String token = "Tog6MsaTGzdKyssA1w5boxBOxsm6OfiqyQYgbYbZ2dHWz7UrQXMtYpbRLXpT";
 
-        OkHttpClient client = new OkHttpClient();
+          OkHttpClient client = new OkHttpClient();
 
-        RequestBody formBody = new FormBody.Builder()
-                .add("consigneeCompanyName", "Supachai Piamthong")
-                .add("consigneeContactName", "Supachai Piamthong")
-                .add("consigneePhone", "123456789")
-                .add("consigneeAddress", "12 34 Moo 8 Chom Bueng Ratchaburi Ratchaburi Chom Bueng 70150")
-                .add("consigneeSubdistrict", "ท่ายาง")
-                .add("consigneeDistrict", "เมืองพิษณุโลก")
-                .add("consigneeProvince", "Bangkok")
-                .add("consigneeCountry", "Thailand")
-                .add("consigneeDistrict", "Bangkok")
-                .add("consigneePostalCode", "70150")
-                .add("consigneeCompanyNameLocale", "\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07")
-                .add("consigneeContactNameLocale", "\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07")
-                .add("consigneeAddressLocale", "90 100 \u0e21 8 \u0e15 \u0e08\u0e2d\u0e21\u0e1a\u0e36\u0e07  \u0e23\u0e32\u0e0a\u0e1a\u0e38\u0e23\u0e35  Ratchaburi \u0e08\u0e2d\u0e21\u0e1a\u0e36\u0e07  Chom Bueng 70150")
-                .add("shipperCompanyName", "Client Company Limited")
-                .add("shipperContactName", "John Lee")
-                .add("shipperPhone", "21800000")
-                .add("shipperAddress", "Room 88, Some Building, District, N.T.")
-                .add("shipperSubdistrict", "Baoan")
-                .add("shipperDistrict", "China")
-                .add("shipperProvince", "Guangdong")
-                .add("shipperCountry", "China")
-                .add("shipperPostalCode", "000000")
-                .add("paymentMethod", "COD")
-                .add("parcelValue", "5888")
-                .add("productType", "Express")
-                .add("shipmentType", "Mobile & Tablet")
-                .add("salePlatformName", "Amazon")
-                .add("referenceNumber", "HAWB12345678")
-                .add("items[0][sku]", "sku-test-1234567890")
-                .add("items[0][categoryId]", "ASQW987654")
-                .add("items[0][categoryName]", "Mobile")
-                .add("items[0][description]", "iPhone 7 32GB Black")
-                .add("items[0][brand]", "Apple")
-                .add("items[0][model]", "iphone 7")
-                .add("items[0][pieces]", "1")
-                .add("items[0][unitPrice]", "5888")
-                .add("items[0][unitPriceCurrency]", "HKD")
-                .add("items[0][CODValue]", "5888")
-                .build();
+          JSONObject jsonObject = new JSONObject();
 
-        Request request = new Request.Builder()
-                .url("http://127.0.0.1:8010/api/orders/MTK88888888")
-                .addHeader("Authorization", "Bearer kazTyZlbtJEZ2KsGkPBFSas8sz16jcCzs00Kw59q7IqyiIrOqDml3x79xqAZ")
-                .post(formBody)
-                .build();
+          jsonObject
+                .put("consigneeCompanyName", "Supachai Piamthong")
+                .put("consigneeContactName", "Supachai Piamthong")
+                .put("consigneePhone", "123456789")
+                .put("consigneeAddress", "12 34 Moo 8 Chom Bueng Ratchaburi Ratchaburi Chom Bueng 70150")
+                .put("consigneeSubdistrict", "ท่ายาง")
+                .put("consigneeDistrict", "เมืองพิษณุโลก")
+                .put("consigneeProvince", "Bangkok")
+                .put("consigneeCountry", "Thailand")
+                .put("consigneeDistrict", "Bangkok")
+                .put("consigneePostalCode", "70150")
+                .put("consigneeCompanyNameLocale", "\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07")
+                .put("consigneeContactNameLocale", "\u0e28\u0e38\u0e20\u0e0a\u0e31\u0e22  \u0e40\u0e1b\u0e35\u0e48\u0e22\u0e21\u0e17\u0e2d\u0e07")
+                .put("consigneeAddressLocale", "90 100 \u0e21 8 \u0e15 \u0e08\u0e2d\u0e21\u0e1a\u0e36\u0e07  \u0e23\u0e32\u0e0a\u0e1a\u0e38\u0e23\u0e35  Ratchaburi \u0e08\u0e2d\u0e21\u0e1a\u0e36\u0e07  Chom Bueng 70150")
+                .put("shipperCompanyName", "Client Company Limited")
+                .put("shipperContactName", "John Lee")
+                .put("shipperPhone", "21800000")
+                .put("shipperAddress", "Room 88, Some Building, District, N.T.")
+                .put("shipperSubdistrict", "Baoan")
+                .put("shipperDistrict", "China")
+                .put("shipperProvince", "Guangdong")
+                .put("shipperCountry", "China")
+                .put("shipperPostalCode", "000000")
+                .put("paymentMethod", "COD")
+                .put("parcelValue", "5888")
+                .put("productType", "Express")
+                .put("shipmentType", "Mobile & Tablet")
+                .put("salePlatformName", "Amazon")
+                .put("referenceNumber", "HAWB12345678")
+                .put("items[0][sku]", "sku-test-1234567890")
+                .put("items[0][categoryId]", "ASQW987654")
+                .put("items[0][categoryName]", "Mobile")
+                .put("items[0][description]", "iPhone 7 32GB Black")
+                .put("items[0][brand]", "Apple")
+                .put("items[0][model]", "iphone 7")
+                .put("items[0][pieces]", "1")
+                .put("items[0][unitPrice]", "5888")
+                .put("items[0][unitPriceCurrency]", "HKD")
+                .put("items[0][CODValue]", "5888");
 
-        try {
-            Response response = client.newCall(request).execute();
+          RequestBody formBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), jsonObject.toString());
 
-            // 201
-            System.out.println(response.code());
+          Request request = new Request.Builder()
+                  .url("http://127.0.0.1:8010/api/orders/MTK88888888")
+                  .addHeader("Authorization", "Bearer kazTyZlbtJEZ2KsGkPBFSas8sz16jcCzs00Kw59q7IqyiIrOqDml3x79xqAZ")
+                  .post(formBody)
+                  .build();
 
-            // {"message":"Success","status_code":201}
-            System.out.println(response.body().string());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+          try {
+              Response response = client.newCall(request).execute();
+
+              // 201
+              System.out.println(response.code());
+
+              // {"message":"Success","status_code":201}
+              System.out.println(response.body().string());
+          } catch (IOException e) {
+              e.printStackTrace();
+          }
+      }
   }
 
 取得订单资料 [GET /orders/{trackingNumber}]
@@ -234,7 +238,6 @@ Java:
           }
       }
   }
-
 
 接受钩子回传资料
 ----------------------------
