@@ -9,17 +9,18 @@
 Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
 
 + 参数
-    + consigneeCompanyName: (字串, 必须) - 收货人公司(英语)
-    + consigneeContactName: (字串, 必须) - 收货人联络人(英语)
+    + consigneeCompanyName: (字串, 可选) - 收货人公司(英语)
+    + consigneeContactName: (字串, 可选) - 收货人联络人(英语)
     + consigneePhone: (字串, 必须) - 收货人电话
-    + consigneeAddress: (字串, 必须) - 收货人地址(英语)
-    + consigneeSubdistrict: (字串, 必须) - 收货人分区份(英语)
-    + consigneeDistrict: (字串, 必须) - 收货人区份(英语)
-    + consigneeProvince: (字串, 必须) - 收货人省份(英语)
+    + consigneeAddress: (字串, 可选) - 收货人地址(英语)
+    + consigneeSubdistrict: (字串, 必须) - 收货人分区份
+    + consigneeDistrict: (字串, 必须) - 收货人区份
+    + consigneeProvince: (字串, 必须) - 收货人省份
     + consigneeCountry: (字串, 必须) - 收货人国家(英语)
-    + consigneeCompanyNameLocale: (字串, 必须) - 收货人公司(目的地官方语言)
+    + consigneeCompanyNameLocale: (字串, 可选) - 收货人公司(目的地官方语言)
     + consigneeContactNameLocale: (字串, 必须) - 收货人联络人(目的地官方语言)
-    + consigneeAddressLocale: (字串, 必须) - 收货人地址(目的地官方语言)
+    + consigneeIdCardNumber: (字串, 可选/必须) - 收货人身份证编号. 如目的地为中国台湾, 总货价大或等於3000当地货币必须
+    + consigneeAddressLocale: (字串, 必须) - 收货人地址(目的地官方语言)
     + consigneePostalCode: (字串, 必须) - 收货人邮政编号
     + shipperCompanyName: (字串, 必须) - 发货人公司(英语)
     + shipperContactName: (字串, 必须) - 发货人联络人(英语)
@@ -32,8 +33,8 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + shipperPostalCode: (字串, 必须) - 发货人邮政编号
     + paymentMethod: (字串, 必须) - 付款方式
     + parcelValue: (十进制数, 必须) - 包裹价值
-    + productType: (字串, 必须) - 寄货渠道: Express = 专线; Postal = 邮政
-    + shipmentType: (整数, 必须) - 包裹类型: General Shipment = 普货; Sensitive Shipment = 带电池货(敏感货); Mobile & Tablet = 手机及平板计算机
+    + productType: (字串, 可选) - 寄货渠道: Express = 专线; Postal = 邮政
+    + shipmentType: (整数, 可选) - 包裹类型: General Shipment = 普货; Sensitive Shipment = 带电池货(敏感货); Mobile & Tablet = 手机及平板计算机
     + salePlatformName: (字串, 必须) - 销售平台名称
     + referenceNumber: (字串, 必须) - 客户参考编号, 客戶对包裹的唯一识别号
     + items[]: (阵列, 必须) - 货品内容阵列
@@ -46,24 +47,25 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + items[][pieces]: (整数, 必须) - 单项SKU件数
     + items[][unitPrice]: (十进制数, 必须) - 单项SKU单价
     + items[][unitPriceCurrency]: (字串, 必须) - 货币单位, 使用ISO 4217标准
-    + items[][CODValue]: (十进制数, 必须) - 单项SKU COD货价(件数*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
+    + items[][CODValue]: (十进制数, 可选/必须) - 单项SKU COD货价(件数*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
 
 建立订单(已有当地派送编号) [POST /orders/{trackingNumber}]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
 
 + 参数
-    + consigneeCompanyName: (字串, 必须) - 收货人公司(英语)
-    + consigneeContactName: (字串, 必须) - 收货人联络人(英语)
+    + consigneeCompanyName: (字串, 可选) - 收货人公司(英语)
+    + consigneeContactName: (字串, 可选) - 收货人联络人(英语)
     + consigneePhone: (字串, 必须) - 收货人电话
-    + consigneeAddress: (字串, 必须) - 收货人地址(英语)
-    + consigneeSubdistrict: (字串, 必须) - 收货人分区份(英语)
-    + consigneeDistrict: (字串, 必须) - 收货人区份(英语)
-    + consigneeProvince: (字串, 必须) - 收货人省份(英语)
+    + consigneeAddress: (字串, 可选) - 收货人地址(英语)
+    + consigneeSubdistrict: (字串, 必须) - 收货人分区份
+    + consigneeDistrict: (字串, 必须) - 收货人区份
+    + consigneeProvince: (字串, 必须) - 收货人省份
     + consigneeCountry: (字串, 必须) - 收货人国家(英语)
-    + consigneeCompanyNameLocale: (字串, 必须) - 收货人公司(目的地官方语言)
+    + consigneeCompanyNameLocale: (字串, 可选) - 收货人公司(目的地官方语言)
     + consigneeContactNameLocale: (字串, 必须) - 收货人联络人(目的地官方语言)
-    + consigneeAddressLocale: (字串, 必须) - 收货人地址(目的地官方语言)
+    + consigneeIdCardNumber: (字串, 可选/必须) - 收货人身份证编号. 如目的地为中国台湾, 总货价大或等於3000当地货币必须
+    + consigneeAddressLocale: (字串, 必须) - 收货人地址(目的地官方语言)
     + consigneePostalCode: (字串, 必须) - 收货人邮政编号
     + shipperCompanyName: (字串, 必须) - 发货人公司(英语)
     + shipperContactName: (字串, 必须) - 发货人联络人(英语)
@@ -76,8 +78,8 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
     + shipperPostalCode: (字串, 必须) - 发货人邮政编号
     + paymentMethod: (字串, 必须) - 付款方式
     + parcelValue: (十进制数, 必须) - 包裹价值
-    + productType: (字串, 必须) - 寄货渠道: Express = 专线; Postal = 邮政
-    + shipmentType: (整数, 必须) - 包裹类型: General Shipment = 普货; Sensitive Shipment = 带电池货(敏感货); Mobile & Tablet = 手机及平板计算机
+    + productType: (字串, 可选) - 寄货渠道: Express = 专线; Postal = 邮政
+    + shipmentType: (整数, 可选) - 包裹类型: General Shipment = 普货; Sensitive Shipment = 带电池货(敏感货); Mobile & Tablet = 手机及平板计算机
     + salePlatformName: (字串, 必须) - 销售平台名称
     + referenceNumber: (字串, 必须) - 客户参考编号, 客戶对包裹的唯一识别号
     + items[]: (阵列, 必须) - 货品内容阵列
@@ -90,7 +92,7 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
     + items[][pieces]: (整数, 必须) - 单项SKU件数
     + items[][unitPrice]: (十进制数, 必须) - 单项SKU单价
     + items[][unitPriceCurrency]: (字串, 必须) - 货币单位, 使用ISO 4217标准
-    + items[][CODValue]: (十进制数, 必须) - 单项SKU COD货价(件数*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
+    + items[][CODValue]: (十进制数, 可选/必须) - 单项SKU COD货价(件数*COD单价). 如付款方式为COD, 此项必填. 使用当地货币
 
 请求 (application/json)
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -219,7 +221,14 @@ Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
                     "export": null,
                     "uplift": null,
                     "import": null,
-                    "handover_lastmile": null
+                    "handover_lastmile": null,
+                    "delivering": null,
+                    "pending": null,
+                    "pending_reason": null,
+                    "reject": null,
+                    "reject_reason": null,
+                    "return": null,
+                    "receive": null
                 }
             }
 
