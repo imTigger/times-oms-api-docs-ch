@@ -11,7 +11,11 @@
     + inbound: (日期时间, 或会留空)
     + outbound: (日期时间, 或会留空)
     + handover_linehaul: (日期时间, 或会留空)
+    + delivering: (日期时间, 或会留空)
+    + pending: (日期时间, 或会留空)
+    + pending_reason: (字串, 或会留空)
     + reject: (日期时间, 或会留空)
+    + reject_reason: (字串, 或会留空)
     + return: (日期时间, 或会留空)
     + receive: (日期时间, 或会留空)
 
