@@ -51,7 +51,7 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
 
 建立订单(已有当地派送编号) [POST /orders/{trackingNumber}]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Postman Collection: https://www.getpostman.com/collections/a6bd52c2c7d150c4dfc2
+Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 
 + 参数
     + consigneeCompanyName: (字串, 可选) - 收货人公司(英语)
