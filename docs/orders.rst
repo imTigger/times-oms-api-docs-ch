@@ -42,6 +42,9 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + items[][categoryId]: (字串, 必须) - 货品分类编号
     + items[][categoryName]: (字串, 必须) - 货品分类名称
     + items[][description]: (字串, 必须) - 品名
+    + items[][specification]: (字串, 可选) - 规格
+    + items[][descriptionOriginal]: (字串, 可选) - 起步港语言品名, 如与目的港语言相同则不用填写
+    + items[][specificationOriginal]: (字串, 可选) - 起步港语言规格, 如与目的港语言相同则不用填写
     + items[][brand]: (字串, 可选/必须) - 牌子. 如包裹类型为手机及平板计算机, 此项必填
     + items[][model]: (字串, 可选/必须) - 型号. 如包裹类型为手机及平板计算机, 此项必填
     + items[][pieces]: (整数, 必须) - 单项SKU件数
@@ -87,6 +90,9 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
     + items[][categoryId]: (字串, 必须) - 货品分类编号
     + items[][categoryName]: (字串, 必须) - 货品分类名称
     + items[][description]: (字串, 必须) - 品名
+    + items[][specification]: (字串, 可选) - 规格
+    + items[][descriptionOriginal]: (字串, 可选) - 起步港语言品名, 如与目的港语言相同则不用填写
+    + items[][specificationOriginal]: (字串, 可选) - 起步港语言规格, 如与目的港语言相同则不用填写
     + items[][brand]: (字串, 可选/必须) - 牌子. 如包裹类型为手机及平板计算机, 此项必填
     + items[][model]: (字串, 可选/必须) - 型号. 如包裹类型为手机及平板计算机, 此项必填
     + items[][pieces]: (整数, 必须) - 单项SKU件数
@@ -166,8 +172,8 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 
             {
                 "message": "Success",
-                "trackingNumber": "MTK123456789",
-                "sortCode": "TH08-01"
+                "trackingNumber": "TN123456789",
+                "sortCode": "SC1234"
             }
 
 
@@ -177,7 +183,12 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 .. code-block:: json
 
             {
-                "message": "Order already exist"
+                "message": "Order already exist",
+                "status_code" 409,
+                "remarks": {
+                    "trackingNumber": "TN123456789",
+                    "sortCode": "SC1234"
+                }
             }
 
 响应 412 (application/json)
@@ -186,7 +197,8 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 .. code-block:: json
 
             {
-                "message": "Invalid parameter"
+                "message": "Invalid parameter",
+                "status_code" 412
             }
 
 响应 428 (application/json)
@@ -195,7 +207,8 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 .. code-block:: json
 
             {
-                "message": "Missing parameter"
+                "message": "Missing parameter",
+                "status_code" 428
             }
 
 取得订单资料
@@ -238,5 +251,6 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 .. code-block:: json
 
             {
-                "message": "Order not found"
+                "message": "Order not found",
+                "status_code" 404
             }
