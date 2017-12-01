@@ -184,7 +184,7 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 
             {
                 "message": "Order already exist",
-                "status_code" 409,
+                "status_code": 409,
                 "remarks": {
                     "trackingNumber": "TN123456789",
                     "sortCode": "SC1234"
@@ -198,7 +198,7 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 
             {
                 "message": "Invalid parameter",
-                "status_code" 412
+                "status_code": 412
             }
 
 响应 428 (application/json)
@@ -208,7 +208,7 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 
             {
                 "message": "Missing parameter",
-                "status_code" 428
+                "status_code": 428
             }
 
 取得订单资料
@@ -252,5 +252,5 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 
             {
                 "message": "Order not found",
-                "status_code" 404
+                "status_code": 404
             }
