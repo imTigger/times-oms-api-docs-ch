@@ -197,7 +197,7 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 .. code-block:: json
 
             {
-                "message": "Order already exist",
+                "message": "Order already exist or invalid parameter",
                 "status_code": 412,
                 "remarks": {
                     "trackingNumber": "TN123456789",
