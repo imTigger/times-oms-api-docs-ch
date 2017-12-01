@@ -198,7 +198,7 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
 
             {
                 "message": "Order already exist",
-                "status_code": 409,
+                "status_code": 412,
                 "remarks": {
                     "trackingNumber": "TN123456789",
                     "sortCode": "SC1234"
