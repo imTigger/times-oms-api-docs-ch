@@ -32,7 +32,6 @@ Postman Collections: https://www.getpostman.com/collections/3120f45724992dcc5913
     + shipperCountry: (字串, 必须) - 发货人国家(英语)
     + shipperPostalCode: (字串, 必须) - 发货人邮政编号
     + paymentMethod: (字串, 必须) - 付款方式
-    + parcelValue: (十进制数, 必须) - 包裹价值
     + productType: (字串, 可选) - 寄货渠道: Express = 专线; Postal = 邮政
     + shipmentType: (整数, 可选) - 包裹类型: General Shipment = 普货; Sensitive Shipment = 带电池货(敏感货); Mobile & Tablet = 手机及平板计算机
     + salePlatformName: (字串, 必须) - 销售平台名称
@@ -80,7 +79,6 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
     + shipperCountry: (字串, 必须) - 发货人国家(英语)
     + shipperPostalCode: (字串, 必须) - 发货人邮政编号
     + paymentMethod: (字串, 必须) - 付款方式
-    + parcelValue: (十进制数, 必须) - 包裹价值
     + productType: (字串, 可选) - 寄货渠道: Express = 专线; Postal = 邮政
     + shipmentType: (整数, 可选) - 包裹类型: General Shipment = 普货; Sensitive Shipment = 带电池货(敏感货); Mobile & Tablet = 手机及平板计算机
     + salePlatformName: (字串, 必须) - 销售平台名称
@@ -131,7 +129,6 @@ Postman Collection: https://www.getpostman.com/collections/9f944b3d95d1324237d0
         "shipperCountry": "China",
         "shipperPostalCode": "000000",
         "paymentMethod": "COD",
-        "parcelValue": "1630",
         "productType": "Express",
         "shipmentType": "Mobile & Tablet",
         "salePlatformName": "Amazon",
